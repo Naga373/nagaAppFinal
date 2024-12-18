@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navbar-left">
+        <span class="project-name">Naga's Design</span>
+        <span class="hamburger" (click)="toggleMenu()">
+            &#9776;
+        </span>
+    </div>
+
+
+    <div class="navbar-right" [ngClass]="{'show-menu': menuOpen}">
+        <button routerLink="/home" class="nav-link">Home</button>
+        <button routerLink="/about" class="nav-link">About</button>
+        <button routerLink="/skills" class="nav-link">Skills</button>
+        <button routerLink="/projects" class="nav-link">Projects</button>
+    </div>
+</nav>

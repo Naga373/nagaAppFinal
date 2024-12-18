@@ -1,0 +1,42 @@
+/* Base styles */
+.main-content {
+  margin: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  opacity: 0; /* Initial state for animation */
+  transform: translateY(20px); /* Initial position */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.main-content.animate {
+  opacity: 1; /* Final state */
+  transform: translateY(0); /* Reset position */
+}
+
+/* For the image */
+.responsive-img {
+  opacity: 0; /* Initial state */
+  transform: scale(0.9); /* Slightly smaller */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.responsive-img.animate {
+  opacity: 1;
+  transform: scale(1); /* Final size */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-left,
+  #matter {
+    width: 100%;
+    text-align: center;
+  }
+}

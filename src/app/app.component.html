@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+<div *ngIf="showLoader" class="loader">
+    Loading...
+  </div>
+  
+  <div *ngIf="!showLoader">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+  </div>

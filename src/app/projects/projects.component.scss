@@ -1,0 +1,76 @@
+/* Center the main container with margin */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: 10%; /* Add 10% margin around the container */
+  }
+  
+  /* Styling the title to center and adjust for all screen sizes */
+  .name h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  /* Flexbox layout with gaps */
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add gap between images */
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  
+  /* Default image styling */
+  .responsive-img {
+    width: 250px;
+    height: auto;
+    border: 5px solid #4caf50; /* Add a green border */
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for the images */
+  .responsive-img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+  }
+  
+  /* Responsive design for tablets (768px to 1024px) */
+  @media (max-width: 1024px) {
+    .images-container {
+      gap: 15px; /* Reduce gap for tablets */
+    }
+  
+    .responsive-img {
+      width: 200px; /* Smaller image size for tablets */
+    }
+  }
+  
+  /* Responsive design for mobile (below 768px) */
+  @media (max-width: 768px) {
+    .images-container {
+      flex-direction: column; /* Stack images */
+      gap: 10px; /* Reduce gap for smaller screens */
+    }
+  
+    .responsive-img {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Responsive design for extra small screens (below 480px) */
+  @media (max-width: 480px) {
+    .responsive-img {
+      max-width: 300px;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+  }
+  

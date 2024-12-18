@@ -1,0 +1,83 @@
+// $black: #000;
+$dark-yellow: red;
+// Add keyframes for animations
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonHover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Main section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+
+    .text-content {
+        flex: 1;
+        text-align: center;
+
+        h1 {
+            font-size: 4rem;
+            padding-right: 3%;
+            line-height: 1.2;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .highlight {
+            color: $dark-yellow;
+        }
+
+        .highlight1 {
+            color: $dark-yellow;
+        }
+
+        .highlight2 {
+            padding-right: 22%;
+        }
+
+        .highlight3 {
+            color: $dark-yellow;
+            padding-right: 10%;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: $dark-yellow;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            animation: fadeIn 2s ease-in-out;
+
+            &:hover {
+                animation: buttonHover 0.3s ease-in-out forwards;
+                background-color: white;
+                color: red;
+            }
+        }
+    }
+}
